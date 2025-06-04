@@ -8,18 +8,22 @@ body {
   background: #00A168;
   color: white;
   text-align: center;
-  padding: 40px;
+  padding: 40px 20px;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
 #chat-container {
   max-width: 600px;
+  width: 90%;
   margin: 0 auto;
   padding: 15px;
   height: 70vh;
   overflow-y: auto;
   background: white;
   border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
 }
 
 .message {
@@ -27,6 +31,8 @@ body {
   padding: 12px;
   border-radius: 10px;
   max-width: 80%;
+  word-wrap: break-word;
+  font-size: 1rem;
 }
 
 .bot-message {
@@ -42,6 +48,7 @@ body {
 
 #buttons {
   max-width: 600px;
+  width: 90%;
   margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
@@ -51,16 +58,34 @@ body {
 
 button {
   background-color: #00A168;
-  margin: 0px 10px;
   color: white;
-  padding: 10px 15px;
+  padding: 10px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
-  flex-grow: 1;
+  font-size: 1rem;
+  flex: 1 1 calc(50% - 20px); /* Responsivo: dois botões por linha */
+  min-width: 120px;
 }
 
 button:hover {
   background-color: #004d99;
+}
+
+/* Responsividade extra para telas pequenas */
+@media (max-width: 480px) {
+  #top-bar {
+    font-size: 1.2rem;
+    padding: 30px 10px;
+  }
+
+  .message {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  button {
+    flex: 1 1 100%; /* Um botão por linha em telas pequenas */
+    font-size: 0.95rem;
+  }
 }
