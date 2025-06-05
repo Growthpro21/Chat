@@ -167,7 +167,7 @@ function mostrarOferta() {
             {
               label: 'Falar com o responsável',
               action: () => {
-                window.location.href = 'https://wa.me/5562996563279'; // Substitua pelo seu número
+                window.location.href = 'https://wa.me/5562995297173'; // Substitua pelo seu número
               }
             }
           ]);
